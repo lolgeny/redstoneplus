@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.lolad.redstoneplus.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ComparatorBlockMixin",
+    "RepeaterBlockMixin",
+    "DyeColorAccessor"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

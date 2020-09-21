@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"lit=true": {"model": "redstoneplus:block/orange_colored_lamp_on"},
+		"lit=false": {"model": "redstoneplus:block/orange_colored_lamp"}
+	}
+}

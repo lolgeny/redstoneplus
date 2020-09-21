@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"lit=true": {"model": "redstoneplus:block/red_colored_lamp_on"},
+		"lit=false": {"model": "redstoneplus:block/red_colored_lamp"}
+	}
+}

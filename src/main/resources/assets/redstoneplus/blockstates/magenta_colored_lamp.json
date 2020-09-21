@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"lit=true": {"model": "redstoneplus:block/magenta_colored_lamp_on"},
+		"lit=false": {"model": "redstoneplus:block/magenta_colored_lamp"}
+	}
+}

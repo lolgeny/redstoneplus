@@ -1,0 +1,13 @@
+{
+  "type": "block",
+  "pools": [{
+    "rolls": 1,
+    "entries": [{
+      "type": "item",
+      "name": "redstoneplus:remembator",
+      "conditions": [{
+        "condition": "minecraft:survives_explosion"
+      }]
+    }]
+  }]
+}

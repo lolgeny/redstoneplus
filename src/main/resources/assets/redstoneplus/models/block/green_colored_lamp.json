@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/cube_all",
+	"textures": {
+		"all": "redstoneplus:block/green_colored_lamp"
+	}
+}
