@@ -19,7 +19,7 @@ import net.minecraft.world.BlockView
 import net.minecraft.world.World
 import java.util.*
 
-abstract class AbstractSensor(settings: AbstractBlock.Settings): Block(settings) {
+abstract class AbstractSensorBlock(settings: AbstractBlock.Settings): Block(settings) {
     abstract fun getValue(state: BlockState, world: ServerWorld, pos: BlockPos): Int
     abstract fun getNamespacedId(): Identifier
 

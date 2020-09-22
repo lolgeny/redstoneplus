@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.math.BlockPos
 import net.minecraft.util.math.Position
 
-class PlayerSensor(settings: AbstractBlock.Settings): AbstractSensor(settings) {
+class PlayerSensorBlock(settings: AbstractBlock.Settings): AbstractSensorBlock(settings) {
     private fun getPositionFromBlockPos(pos: BlockPos): Position {
         return object: Position {
             override fun getX(): Double {return pos.x.toDouble()}

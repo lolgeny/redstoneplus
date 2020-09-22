@@ -11,6 +11,7 @@
   "block.redstoneplus.purple_colored_lamp": "Purple Colored Lamp",
   "block.redstoneplus.blue_colored_lamp": "Blue Colored Lamp",
   "block.redstoneplus.green_colored_lamp": "Green Colored Lamp",
-  "block.redstoneplus.red_colored_lamp": "Red Colored Lamp"
-
+  "block.redstoneplus.red_colored_lamp": "Red Colored Lamp",
+  "block.redstoneplus.player_sensor": "Player Sensor",
+  "block.redstoneplus.weather_sensor": "Weather Sensor"
 }
