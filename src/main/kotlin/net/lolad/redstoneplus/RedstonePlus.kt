@@ -6,6 +6,8 @@ import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.lolad.redstoneplus.block.ColoredLampBlock
 import net.lolad.redstoneplus.block.RemembatorBlock
+import net.lolad.redstoneplus.block.UninvertedTorchblock
+import net.lolad.redstoneplus.block.WallUninvertedTorchBlock
 import net.minecraft.block.Material
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
@@ -20,6 +22,7 @@ class RedstonePlus: ModInitializer {
 
     companion object {
         const val MODID = "redstoneplus"
+        val REDGROUP: Item.Settings = Item.Settings().group(ItemGroup.REDSTONE)
         val REMEMBATOR = RemembatorBlock(FabricBlockSettings.of(Material.SUPPORTED).breakInstantly())
         val WHITE_COLORED_LAMP = ColoredLampBlock(DyeColor.WHITE, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
         val ORANGE_COLORED_LAMP = ColoredLampBlock(DyeColor.ORANGE, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
@@ -33,9 +36,12 @@ class RedstonePlus: ModInitializer {
         val BLUE_COLORED_LAMP = ColoredLampBlock(DyeColor.BLUE, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
         val GREEN_COLORED_LAMP = ColoredLampBlock(DyeColor.GREEN, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
         val RED_COLORED_LAMP = ColoredLampBlock(DyeColor.RED, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        var UNINVERTED_TORCH = UninvertedTorchblock(FabricBlockSettings.of(Material.SUPPORTED))
+        var WALL_UNINVERTED_TORCH = WallUninvertedTorchBlock(FabricBlockSettings.of(Material.SUPPORTED).dropsLike(UNINVERTED_TORCH))
 
         // Block Entity types
     }
+
 
     private fun registerBlocks() {
         Registry.register(Registry.BLOCK, Identifier(MODID, "remembator"), REMEMBATOR)
@@ -52,6 +58,7 @@ class RedstonePlus: ModInitializer {
         BLUE_COLORED_LAMP.register()
         GREEN_COLORED_LAMP.register()
         RED_COLORED_LAMP.register()
+        UninvertedTorchblock.register(UNINVERTED_TORCH, WALL_UNINVERTED_TORCH)
     }
 
     override fun onInitialize() {
