@@ -17,7 +17,7 @@ import net.minecraft.util.registry.Registry
 import java.util.function.ToIntFunction
 
 
-class ColoredLamp(val color: DyeColor, settings: Settings) : RedstoneLampBlock(settings) {
+class ColoredLampBlock(val color: DyeColor, settings: Settings) : RedstoneLampBlock(settings) {
     companion object {
         val luminance = ToIntFunction<BlockState>{ state -> if (state.get(LIT)) 15 else 0 }
         val allowsSpawning = TypedContextPredicate<EntityType<*>>{ _, _, _, _ -> true }
