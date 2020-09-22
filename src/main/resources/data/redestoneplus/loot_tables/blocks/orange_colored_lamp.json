@@ -4,7 +4,7 @@
     "rolls": 1,
     "entries": [{
       "type": "item",
-      "name": "redstoneplus:remembator",
+      "name": "redstoneplus:orange_colored_lamp",
       "conditions": [{
         "condition": "minecraft:survives_explosion"
       }]
