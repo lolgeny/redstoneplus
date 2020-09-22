@@ -4,19 +4,15 @@ import net.minecraft.block.AbstractBlock
 import net.minecraft.block.AbstractRedstoneGateBlock
 import net.minecraft.block.Block
 import net.minecraft.block.BlockState
-import net.minecraft.item.ItemPlacementContext
 import net.minecraft.server.world.ServerWorld
 import net.minecraft.state.StateManager
-import net.minecraft.state.property.DirectionProperty
 import net.minecraft.state.property.IntProperty
 import net.minecraft.util.math.BlockPos
 import net.minecraft.util.math.Direction
-import net.minecraft.world.BlockView
-import net.minecraft.world.TickPriority
 import net.minecraft.world.World
 import java.util.*
 
-class Remembator(settings: AbstractBlock.Settings): AbstractRedstoneGateBlock(settings) {
+class RemembatorBlock(settings: AbstractBlock.Settings): AbstractRedstoneGateBlock(settings) {
     init {
         defaultState = stateManager.defaultState.with(LEVEL, 0).with(FACING, Direction.NORTH).with(POWERED, true)
     }

@@ -20,6 +20,7 @@ class RedstonePlus: ModInitializer {
 
     companion object {
         val MODID = "redstoneplus"
+<<<<<<< Updated upstream
         val REMEMBATOR = Remembator(FabricBlockSettings.of(Material.SUPPORTED).breakInstantly())
         val WHITE_COLORED_LAMP = ColoredLamp(DyeColor.WHITE, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLamp.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLamp.allowsSpawning))
         val ORANGE_COLORED_LAMP = ColoredLamp(DyeColor.ORANGE, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLamp.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLamp.allowsSpawning))
@@ -33,6 +34,24 @@ class RedstonePlus: ModInitializer {
         val BLUE_COLORED_LAMP = ColoredLamp(DyeColor.BLUE, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLamp.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLamp.allowsSpawning))
         val GREEN_COLORED_LAMP = ColoredLamp(DyeColor.GREEN, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLamp.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLamp.allowsSpawning))
         val RED_COLORED_LAMP = ColoredLamp(DyeColor.RED, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLamp.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLamp.allowsSpawning))
+=======
+        val REMEMBATOR = RemembatorBlock(FabricBlockSettings.of(Material.SUPPORTED).breakInstantly())
+        val WHITE_COLORED_LAMP = ColoredLampBlock(DyeColor.WHITE, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        val ORANGE_COLORED_LAMP = ColoredLampBlock(DyeColor.ORANGE, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        val MAGENTA_COLORED_LAMP = ColoredLampBlock(DyeColor.MAGENTA, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        val LIGHT_BLUE_COLORED_LAMP = ColoredLampBlock(DyeColor.LIGHT_BLUE, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        val YELLOW_COLORED_LAMP = ColoredLampBlock(DyeColor.YELLOW, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        val LIME_COLORED_LAMP = ColoredLampBlock(DyeColor.LIME, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        val PINK_COLORED_LAMP = ColoredLampBlock(DyeColor.PINK, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        val CYAN_COLORED_LAMP = ColoredLampBlock(DyeColor.CYAN, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        val PURPLE_COLORED_LAMP = ColoredLampBlock(DyeColor.PURPLE, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        val BLUE_COLORED_LAMP = ColoredLampBlock(DyeColor.BLUE, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        val GREEN_COLORED_LAMP = ColoredLampBlock(DyeColor.GREEN, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        val RED_COLORED_LAMP = ColoredLampBlock(DyeColor.RED, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
+        val PLAYER_SENSOR = PlayerSensor(FabricBlockSettings.of(Material.WOOD))
+
+        // Block Entity types
+>>>>>>> Stashed changes
     }
 
     fun registerBlocks() {
