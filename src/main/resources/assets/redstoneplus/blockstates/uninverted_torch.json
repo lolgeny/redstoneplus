@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=true": {"model":  "redstoneplus:block/uninverted_torch"},
+    "powered=false": {"model": "redstoneplus:block/off_uninverted_torch"}
+  }
+}

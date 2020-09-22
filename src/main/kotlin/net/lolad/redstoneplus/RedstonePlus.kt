@@ -4,13 +4,7 @@ import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
-import net.lolad.redstoneplus.block.ColoredLampBlock
-import net.lolad.redstoneplus.block.RemembatorBlock
-import net.lolad.redstoneplus.block.UninvertedTorchblock
-import net.lolad.redstoneplus.block.WallUninvertedTorchBlock
-import net.lolad.redstoneplus.block.PlayerSensorBlock
-import net.lolad.redstoneplus.block.RemembatorBlock
-import net.lolad.redstoneplus.block.WeatherSensorBlock
+import net.lolad.redstoneplus.block.*
 import net.minecraft.block.Material
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
@@ -41,8 +35,8 @@ class RedstonePlus: ModInitializer {
         val RED_COLORED_LAMP = ColoredLampBlock(DyeColor.RED, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLampBlock.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLampBlock.allowsSpawning))
         val PLAYER_SENSOR = PlayerSensorBlock(FabricBlockSettings.of(Material.WOOD))
         val WEATHER_SENSOR = WeatherSensorBlock(FabricBlockSettings.of(Material.WOOD))
-        var UNINVERTED_TORCH = UninvertedTorchblock(FabricBlockSettings.of(Material.SUPPORTED))
-        var WALL_UNINVERTED_TORCH = WallUninvertedTorchBlock(FabricBlockSettings.of(Material.SUPPORTED).dropsLike(UNINVERTED_TORCH))
+        var UNINVERTED_TORCH = UninvertedTorchblock(FabricBlockSettings.of(Material.SUPPORTED).noCollision().breakInstantly().luminance(UninvertedTorchblock.luminance))
+        var WALL_UNINVERTED_TORCH = WallUninvertedTorchBlock(FabricBlockSettings.of(Material.SUPPORTED).noCollision().breakInstantly().luminance(UninvertedTorchblock.luminance).dropsLike(UNINVERTED_TORCH))
 
         // Block Entity types
     }

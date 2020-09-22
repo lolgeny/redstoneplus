@@ -11,6 +11,7 @@
   "environment": "*",
   "entrypoints": {
     "client": [
+      "net.lolad.redstoneplus.client.ClientRedstonePlus"
     ],
     "main": [
       "net.lolad.redstoneplus.RedstonePlus"

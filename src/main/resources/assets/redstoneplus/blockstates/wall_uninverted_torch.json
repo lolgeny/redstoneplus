@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "powered=true,facing=east": {"model":  "redstoneplus:block/wall_uninverted_torch", "y": 0},
+    "powered=true,facing=south": {"model":  "redstoneplus:block/wall_uninverted_torch", "y": 90},
+    "powered=true,facing=west": {"model":  "redstoneplus:block/wall_uninverted_torch", "y": 180},
+    "powered=true,facing=north": {"model":  "redstoneplus:block/wall_uninverted_torch", "y": 270},
+    "powered=false,facing=east": {"model":  "redstoneplus:block/wall_off_uninverted_torch", "y": 0},
+    "powered=false,facing=south": {"model":  "redstoneplus:block/wall_off_uninverted_torch", "y": 90},
+    "powered=false,facing=west": {"model":  "redstoneplus:block/wall_off_uninverted_torch", "y": 180},
+    "powered=false,facing=north": {"model":  "redstoneplus:block/wall_off_uninverted_torch","y": 270}
+  }
+}

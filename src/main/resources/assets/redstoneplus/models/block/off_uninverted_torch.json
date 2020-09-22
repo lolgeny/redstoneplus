@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_torch",
+  "textures": {
+    "torch": "redstoneplus:block/off_uninverted_torch"
+  }
+}
