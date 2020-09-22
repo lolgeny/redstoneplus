@@ -65,10 +65,6 @@ class WallUninvertedTorchBlock(settings: AbstractBlock.Settings): UninvertedTorc
     }
 
     override fun getWeakRedstonePower(state: BlockState?, world: BlockView?, pos: BlockPos?, direction: Direction?): Int {
-        return super.getWeakRedstonePower(state, world, pos, direction)
-    }
-
-    override fun getStrongRedstonePower(state: BlockState?, world: BlockView?, pos: BlockPos?, direction: Direction?): Int {
-        return super.getStrongRedstonePower(state, world, pos, direction)
+        return if (state?.get(POWERED) == true && direction != state.get(FACING)) 15 else 0
     }
 }

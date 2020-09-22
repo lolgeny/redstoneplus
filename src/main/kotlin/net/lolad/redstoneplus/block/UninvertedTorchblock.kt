@@ -1,5 +1,7 @@
 package net.lolad.redstoneplus.block
 
+import net.fabricmc.api.EnvType
+import net.fabricmc.api.Environment
 import net.lolad.redstoneplus.RedstonePlus
 import net.lolad.redstoneplus.RedstonePlus.Companion.MODID
 import net.minecraft.block.AbstractBlock
@@ -78,6 +80,16 @@ open class UninvertedTorchblock(settings: AbstractBlock.Settings): TorchBlock(se
     override fun onStateReplaced(state: BlockState?, world: World?, pos: BlockPos?, newState: BlockState?, moved: Boolean) {
         for (direction in Direction.values()) {
             if (!moved) world?.updateNeighborsAlways(pos?.offset(direction), this)
+        }
+    }
+
+    @Environment(EnvType.CLIENT)
+    override fun randomDisplayTick(state: BlockState, world: World, pos: BlockPos, random: Random) {
+        if (state.get(POWERED)) {
+            val d = pos.x.toDouble() + 0.5 + (random.nextDouble() - 0.5) * 0.2
+            val e = pos.y.toDouble() + 0.7 + (random.nextDouble() - 0.5) * 0.2
+            val f = pos.z.toDouble() + 0.5 + (random.nextDouble() - 0.5) * 0.2
+            world.addParticle(particle, d, e, f, 0.0, 0.0, 0.0)
         }
     }
 }
