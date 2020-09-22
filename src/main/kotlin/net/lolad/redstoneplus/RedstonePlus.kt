@@ -4,8 +4,9 @@ import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
-import net.lolad.redstoneplus.block.ColoredLamp
-import net.lolad.redstoneplus.block.Remembator
+import net.lolad.redstoneplus.block.ColoredLampBlock
+import net.lolad.redstoneplus.block.PlayerSensor
+import net.lolad.redstoneplus.block.RemembatorBlock
 import net.minecraft.block.Material
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
@@ -33,6 +34,7 @@ class RedstonePlus: ModInitializer {
         val BLUE_COLORED_LAMP = ColoredLamp(DyeColor.BLUE, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLamp.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLamp.allowsSpawning))
         val GREEN_COLORED_LAMP = ColoredLamp(DyeColor.GREEN, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLamp.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLamp.allowsSpawning))
         val RED_COLORED_LAMP = ColoredLamp(DyeColor.RED, FabricBlockSettings.of(Material.REDSTONE_LAMP).luminance(ColoredLamp.luminance).strength(0.3F).sounds(BlockSoundGroup.GLASS).allowsSpawning(ColoredLamp.allowsSpawning))
+        val PLAYER_SENSOR = PlayerSensor(FabricBlockSettings.of(Material.WOOD))
     }
 
     fun registerBlocks() {
@@ -50,6 +52,7 @@ class RedstonePlus: ModInitializer {
         BLUE_COLORED_LAMP.register()
         GREEN_COLORED_LAMP.register()
         RED_COLORED_LAMP.register()
+        PLAYER_SENSOR.register()
     }
 
     override fun onInitialize() {
